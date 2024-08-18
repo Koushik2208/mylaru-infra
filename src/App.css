@@ -12,7 +12,11 @@ body {
   flex: 1;
 }
 
-.home{
+section {
+  padding: 40px 0px;
+}
+
+.home {
   background-color: #ddd;
   color: black;
   height: 500px;
@@ -24,6 +28,9 @@ body {
   align-items: center;
   padding: 0px 20px;
   border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0px;
+  background-color: white;
 }
 
 .navbar-links {
@@ -35,6 +42,11 @@ body {
   cursor: pointer;
 }
 
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+}
+
 .list-styled {
   list-style: none;
   display: flex;
@@ -44,7 +56,7 @@ body {
   padding: 0px;
 }
 
-.list-styled li:hover{
+.list-styled li:hover {
   text-decoration: underline;
 }
 
@@ -112,7 +124,7 @@ body {
   margin: 50px 0px 0px 0px;
 }
 
-.info p{
+.info p {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -120,16 +132,39 @@ body {
   padding: 0px;
 }
 
-.social-links{
+.social-links {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.social-links a{
+.social-links a {
   text-decoration: none;
   color: white;
 }
+
+.hero-img {
+  background-image: url('./pages/images/abbe-sublett-nxZDMUQhN4o-unsplash_11zon.webp');
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: change-image 10s infinite linear;
+}
+
+@keyframes change-image {
+
+  0%,
+  100% {
+    background-image: url('./pages/images/abbe-sublett-nxZDMUQhN4o-unsplash_11zon.webp');
+  }
+
+  40%,
+  60% {
+    background-image: url('./pages/images/amanda-marie-LCJ9iOli-uE-unsplash_11zon.webp');
+  }
+}
+
 
 @media screen and (max-width: 480px) {
   .navbar-links {
@@ -138,5 +173,13 @@ body {
 
   .toggler {
     display: block;
+  }
+
+  .info {
+    margin: 10px 0px 30px 0px;
+  }
+
+  .footer h3 {
+    margin-bottom: 20px;
   }
 }

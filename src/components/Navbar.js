@@ -4,10 +4,18 @@ const Navbar = () => {
         <div className="navbar">
             <Link to="/" className="logo">Mylaru</Link>
             <ul className="navbar-links">
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Contact us</li>
+                <li>
+                    <a href="#about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact-us">Contact Us</a>
+                </li>
             </ul>
 
             <img src={require('./images/menu.webp')} className="toggler" alt="toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" />
