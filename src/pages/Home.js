@@ -2,7 +2,7 @@ const Home = () => {
     return (
         <div>
             <div className="hero-img"></div>
-            <section>
+            <section id="about-us">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -48,6 +48,48 @@ const Home = () => {
                                 <li>STAAD PRO</li>
                                 <li>SKETCH UP</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="row d-flex align-items-center">
+                        <div className="col-md-6">
+                            <p>Every brick, every
+                                pillar, every wall has
+                                a part in the story.
+                                They contribute to
+                                the narrative of the
+                                entire structure.</p>
+                        </div>
+                        <div className="col-md-6">
+                            <img src={require('./images/abbe-sublett-nxZDMUQhN4o-unsplash_11zon.webp')} alt="site" className="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div className="container">
+                    <h4>Selected Projects</h4>
+                    <div className="row d-flex align-items-center">
+                        <div className="col-md-6">
+                            <img src={require('./images/bbf9e62768e5d67b73141954e96764a9eef3f035.webp')} alt="selected project" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6">
+                            <img src={require('./images/building-construction-work-services.webp')} alt="selected project" className="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="row d-flex align-items-center">
+                        <div className="col-md-6">
+                            Layout demonstration
+                        </div>
+                        <div className="col-md-6">
+                            <img src={require('./images/layout.webp')} alt="layout" className="img-fluid" />
                         </div>
                     </div>
                 </div>

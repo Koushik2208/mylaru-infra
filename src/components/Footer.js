@@ -5,7 +5,7 @@ import { FiPhone } from "react-icons/fi";
 import { IoPersonOutline, IoLogoWhatsapp, IoLogoInstagram, IoLogoLinkedin, IoLogoFacebook } from "react-icons/io5";
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer" id="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
