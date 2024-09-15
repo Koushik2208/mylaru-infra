@@ -1,5 +1,7 @@
 body {
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
+  /* font-family: "Forum", serif; */
+  font-family: "Outfit", sans-serif;
 }
 
 .layout {
@@ -13,24 +15,18 @@ body {
 }
 
 section {
-  padding: 40px 0px;
-}
-
-.home {
-  background-color: #ddd;
-  color: black;
-  height: 500px;
+  padding: 50px 0px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 10;
 }
 
 .navbar-links {
@@ -44,7 +40,9 @@ section {
 
 .navbar-links a {
   text-decoration: none;
-  color: black;
+  color: #333333;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .list-styled {
@@ -74,8 +72,8 @@ section {
 }
 
 .footer {
-  color: white;
-  background-color: black;
+  color: #333333;
+  background-color: #F5F5DC;
   padding: 20px 0px;
 }
 
@@ -97,8 +95,8 @@ section {
   color: black;
 }
 
-.navbar-links li:hover {
-  text-decoration: underline;
+.navbar-links a:hover {
+  color: orange;
 }
 
 .logo,
@@ -107,21 +105,19 @@ section {
   color: orange;
   font-size: 36px;
   cursor: pointer;
-  padding: 0px 10px;
+  max-width: 60px;
 }
 
 .footer-logo {
-  color: orange;
   padding: 0px;
+  max-width: unset;
+  width: 100px;
+  display: block;
 }
 
 .toggler {
   display: none;
   width: 20px;
-}
-
-.info {
-  margin: 50px 0px 0px 0px;
 }
 
 .info p {
@@ -144,27 +140,211 @@ section {
 }
 
 .hero-img {
-  background-image: url('./pages/images/abbe-sublett-nxZDMUQhN4o-unsplash_11zon.webp');
-  height: 500px;
+  background-image: url('./pages/images/hero-img.webp');
+  min-height: 100vh;
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  animation: change-image 10s infinite linear;
+  background-position: center;
+  display: flex;
+  padding: 0px;
 }
 
-@keyframes change-image {
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+  color: #F0F0F0;
+  backdrop-filter: brightness(50%);
+}
 
-  0%,
+.hero .container {
+  transform: translateX(-100%);
+  animation: slide 1s linear forwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
   100% {
-    background-image: url('./pages/images/abbe-sublett-nxZDMUQhN4o-unsplash_11zon.webp');
-  }
-
-  40%,
-  60% {
-    background-image: url('./pages/images/amanda-marie-LCJ9iOli-uE-unsplash_11zon.webp');
+    transform: translateX(0);
   }
 }
 
+
+.hero h1 {
+  font-weight: 600;
+}
+
+.hero button {
+  background-color: #556B2F;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: orange;
+  }
+}
+
+#services h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-card {
+  width: 250px;
+  height: 300px;
+  border: 1px solid #708090;
+  border-radius: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.service-card:hover .overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 20px;
+}
+
+.service-card:hover img {
+  background-color: white;
+}
+
+.service-card .overlay {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #F5F5DC;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover .holder {
+  border-radius: 50%;
+  background-color: white;
+}
+
+.service-card img {
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card .holder {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card .title {
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover .title {
+  font-weight: 600;
+  color: #333333;
+  font-size: 16px;
+  transform: translateY(10px);
+}
+
+#training {
+  background-color: #F5F5DC;
+}
+
+#training h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#training ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#training ul li {
+  margin-bottom: 10px;
+  width: 300px;
+  background-color: white;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#training ul li::before {
+  content: '>';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+#about-us h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.philosophy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  border-radius: 20px;
+}
+
+.philosophy img,
+.philosophy p {
+  min-width: 300px;
+  max-width: 550px;
+  text-align: justify;
+}
+
+.philosophy img {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.philosophy p {
+  padding: 0px 20px;
+}
 
 @media screen and (max-width: 480px) {
   .navbar-links {
@@ -181,5 +361,15 @@ section {
 
   .footer h3 {
     margin-bottom: 20px;
+  }
+
+  .philosophy p {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .philosophy img{
+    border-radius: 20px 20px 0px 0px;
   }
 }
